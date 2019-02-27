@@ -117,7 +117,7 @@ export class AssignmentSummary extends Component {
               title: 'Send first texts',
               count: unmessagedCount,
               primary: true,
-              disabled: (useDynamicAssignment && !hasUnassignedContacts && unmessagedCount == 0) || (useDynamicAssignment && maxContacts === 0),
+              disabled: (useDynamicAssignment && !hasUnassignedContacts && unmessagedCount == 0 && maxContacts !== 0) ? true : false,
               contactsFilter: 'text',
               hideIfZero: !useDynamicAssignment
             })}
